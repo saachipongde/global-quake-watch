@@ -21,8 +21,8 @@ const MapView = ({ earthquakes }) => {
     <div className="map-wrapper">
         <MapContainer
           center={[30, 0]}
-          zoom={2.1}
-          minZoom={2.1}
+          zoom={2}
+          minZoom={2}
           maxBounds={bounds}
           maxBoundsViscosity={1.0}
           style={{ height: '100%', width: '100%' }}
