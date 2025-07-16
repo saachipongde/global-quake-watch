@@ -1,14 +1,3 @@
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
   min-height: 10vh;
@@ -20,39 +9,24 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
 
 .App {
   display: flex;
   flex-direction: row;
   height: 100vh;
-  width: 100vw; /* Ensure the app container itself doesn't overflow */
-  overflow: hidden; /* Prevents the container from scrolling */
+  width: 100vw; 
+  overflow: hidden; 
 }
 
-
 .controls-container {
-  /* Using a CSS variable for easy theme changes */
   --accent-color: #007bff; 
-  
-  width: 320px; /* A slightly wider sidebar */
-  flex-shrink: 0; /* Prevents the panel from shrinking */
+  width: 320px;
+  flex-shrink: 0; 
   height: 100vh;
-  background-color: #f8f9fa; /* A softer background color */
+  background-color: #f8f9fa;
   padding: 24px;
-  border-right: 1px solid #dee2e6; /* A subtle border to separate from the map */
-  overflow-y: auto; /* Lets the panel scroll if content is too long */
+  border-right: 1px solid #dee2e6; 
+  overflow-y: auto;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
@@ -63,7 +37,17 @@
   margin-bottom: 20px;
   padding-bottom: 10px;
   border-bottom: 1px solid #dee2e6;
+  text-align: center;
 }
+
+.controls-container img{
+  max-height: 150px; 
+  width: auto;
+  margin-bottom: 5px;
+  margin-left: 75px;
+  align-items: center;
+}
+
 
 .controls-container > div {
   margin-top: 20px;
@@ -77,38 +61,25 @@
   margin-bottom: 8px;
 }
 
-/* --- Custom Styled Dropdown Menus (select) --- */
 .controls-container select {
-  /* Reset and General Styling */
-  appearance: none; /* Removes default OS styling */
+  appearance: none; 
   -webkit-appearance: none;
   -moz-appearance: none;
   display: block;
   width: 100%;
-  
-  /* Sizing and Spacing */
-  padding: 10px 40px 10px 12px; /* Extra padding on the right for the arrow */
-  
-  /* Font and Color */
+  padding: 10px 40px 10px 12px; 
   font-size: 16px;
   color: #495057;
   background-color: #ffffff;
-
-  /* Border and Shape */
   border: 1px solid #ced4da;
   border-radius: 6px;
-  
-  /* Custom Arrow */
   background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007bff%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22/%3E%3C/svg%3E');
   background-repeat: no-repeat;
   background-position: right 12px center;
   background-size: 12px;
-
-  /* Smooth Transitions */
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
-/* --- Interactive States for the Dropdowns --- */
 .controls-container select:hover {
   border-color: #a4b5c4;
 }
@@ -120,26 +91,24 @@
 }
 
 .map-wrapper {
-  flex-grow: 1; /* Allows the map to fill all remaining space */
-  width: 100%; /* Helps the map library calculate its size */
+  flex-grow: 1; 
+  width: 100%; 
   height: 100%;
 }
 
-
 .leaflet-container {
-  width: 100%; /* Or your desired width */
-  height: 400px; /* You must define a height for the map to be visible */
+  width: 100%;
+  height: 400px; 
 }
 
 .control-group {
-  display: block; /* Makes the div a block element */
-  margin-bottom: 10px; /* Adds some space between the controls */
+  display: block; 
+  margin-bottom: 10px;
 }
 
-/* Optional: Style the labels to align better */
 .control-group label {
-  display: block; /* Puts the label on its own line above the select */
-  margin-bottom: 5px; /* Adds space between the label and the select */
+  display: block; 
+  margin-bottom: 5px;
 }
 
 .legend-container {
@@ -169,7 +138,7 @@
   height: 16px;
   border-radius: 50%;
   margin-right: 12px;
-  flex-shrink: 0; /* Prevents the dot from shrinking */
+  flex-shrink: 0; 
   border: 1px solid rgba(0,0,0,0.1);
 }
 

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import MapView from './components/MapView'; // Import the MapView component
+import MapView from './components/MapView';
 import './App.css';
 
 function App() {
@@ -32,9 +32,11 @@ function App() {
   return (
     <div className="App">
       <div className="controls-container">
+        <div className="control-group">
+          <img src="../fevicon.ico"  alt="Global Quake Watch logo" className="logo-image" />
+        </div>
         <h1>Global Quake Watch</h1>
-        
-        {/* Each control group is now a block */}
+
         <div className="control-group">
           <label htmlFor="duration-select">Time Range:</label>
           <select 

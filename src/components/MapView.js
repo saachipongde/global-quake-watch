@@ -2,19 +2,18 @@ import React from 'react';
 import { MapContainer, TileLayer, Circle, Popup } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
-// Define the world bounds to prevent panning into repeated maps
 const bounds = [
-  [-90, -180], // Southwest corner
-  [90, 180]    // Northeast corner
+  [-90, -180], 
+  [90, 180] 
 ];
 
 const MapView = ({ earthquakes }) => {
     const getIntensityColor = (magnitude) => {
-        if (magnitude >= 7) return 'rgba(128, 0, 128,';
-        if (magnitude >= 6) return 'rgba(255, 0, 0,';
-        if (magnitude >= 4.5) return 'rgba(255, 165, 0,';       // High intensity (Red)
-        if (magnitude >= 2.5) return 'rgba(255, 255, 0,';    // Moderate intensity (Orange)
-        return 'rgba(0, 255, 0,';                                 // Low intensity (Green)
+        if (magnitude >= 7) return 'rgba(128, 0, 128,'; //purple
+        if (magnitude >= 6) return 'rgba(255, 0, 0,'; //red
+        if (magnitude >= 4.5) return 'rgba(255, 165, 0,'; //orange
+        if (magnitude >= 2.5) return 'rgba(255, 255, 0,'; //yellow
+        return 'rgba(0, 255, 0,'; //green
       };
 
   return (
